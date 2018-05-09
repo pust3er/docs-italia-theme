@@ -1,0 +1,75 @@
+.question-and-answers
+  .glossary
+    display: none
+  
+  .topic-title
+    @extend h2
+    color: #000
+
+  p
+    color: #5a6772
+
+  blockquote
+    margin-left: 0
+    margin-bottom: 0
+
+  .pull-quote
+    & > div > p
+      text-transform: uppercase
+      color: #000
+
+    & > div
+      & > blockquote > div
+          padding-bottom: 2.4rem
+          max-width: 45rem
+          font-weight: 600
+          font-size: 2rem
+          color: #5a6772
+
+      & > ul > li
+        list-style: none
+        margin-left: 1rem
+        display: inline-block
+        background-color: #6adde0
+        padding: 0.35rem 0.7rem
+        border-bottom: 0.1rem dotted black
+        margin-top: 1rem
+
+        a,
+        a:hover
+          text-decoration: none !important
+          color: #000
+          font-weight: 600
+
+    &:nth-of-type(odd) > div
+      & > blockquote
+        padding-left: 1.3rem
+        border-left: 0.4rem solid #6adde0
+
+      & > ul
+        padding-left: 1.3rem
+        border-left: 0.4rem solid #6adde0
+
+        & > li:first-of-type
+          margin-left: 0
+
+    &:nth-of-type(even) > div
+      & > p
+        text-align: right
+        margin-left: auto
+
+      & > blockquote
+        padding-right: 1.3rem
+        border-right: 0.4rem solid #6adde0
+        
+        & > div
+          text-align: right
+          margin-left: auto
+
+      & > ul
+        padding-right: 1.3rem
+        border-right: 0.4rem solid #6adde0
+        text-align: right
+
+        & > li:first-of-type
+          margin-right: 0
