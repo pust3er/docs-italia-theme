@@ -11,7 +11,7 @@ $('.question-and-answers .glossary dt').each(function() {
       .addClass('Icon-drop-down Dropdown-arrow u-color-white')
       .appendTo(definition);
     $(document.createElement('span'))
-      .addClass('u-layout-prose u-text-r-xs')
+      .addClass('u-layout-prose u-text-r-xs u-inlineBlock u-textLeft')
       .html(term.html())
       .appendTo(definition);
     $(this).closest('li').append(definition);
