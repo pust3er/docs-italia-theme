@@ -306,15 +306,6 @@ header.sticky .doc-header-room {
   /* background */
 }
 
-#desktop-menu {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  /* For browsers don't support translate3d. */
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  will-change: position, transform;
-}
-
 .col--nav {
   width: 100%;
 }
@@ -328,14 +319,12 @@ header.sticky .doc-header-room {
 }
 
 .docs-italia-menu {
-  will-change: min-height;
   display: none;
 }
 @media (min-width: 768px) {
   .docs-italia-menu {
     display: block;
     padding-top: 1.5rem;
-    bottom: 2rem;
   }
 }
 
