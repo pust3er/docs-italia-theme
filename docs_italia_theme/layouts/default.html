@@ -3,43 +3,42 @@
 
 {% include 'layouts/head.html' %}
 
-<body class="{{ site.css_theme }}">
-  {% include 'layouts/header.html' %}
-  <div id="main" role="document">
-    <div class="container-fluid container-fluid--desktop main-container">
-      <div class="row">
-        <nav class="col--nav">
-          {% include 'layouts/sidebar.html' %}
-          {% include 'layouts/offcanvas.html' %}
-        </nav>
-        <div id="doc-content" class="col-content">
-          <div class="doc-content__consultation">
-            <span class="Icon it-icon-edit"></span>
-            {{ _(t.in_consultation) }}
-          </div>
-          {% if prev %}
-            <div class="footer-buttons footer-buttons--prev" role="navigation" aria-label="footer navigation">
-                <a href="{{ prev.link|e }}" class="" title="{{ prev.title|striptags|e }}" accesskey="p" rel="prev"> {{ _(t.go_to) }} {{ prev.title }}</a>
-            </div>
-          {% endif %}
-          {% block body %}{% endblock %}
-          {% if next %}
-            <div class="footer-buttons footer-buttons--next" role="navigation" aria-label="footer navigation">
-                  <a href="{{ next.link|e }}" class="" title="{{ next.title|striptags|e }}" accesskey="n" rel="next">{{ next.title }}</a>
-              </div>
-            {% endif %}
-          </div>
-
-        </div>
-      </div>
+<body class="{{ site.css_theme }} neutral-1-bg">
+  <header class="header">
+    {% include 'layouts/header.html' %}
+  </header>
+  {% if builder != 'singlehtml' %}
+  <div class="header-doc">
+    {% include 'layouts/doc-header.html' %}
   </div>
-  {% include 'layouts/footer.html' %}
+  {% endif %}
+  <main class="main">
+    <div class="row">
+      <aside class="sidebar">
+        {% include 'layouts/sidebar.html' %}
+      </aside>
+      <section class="document">
+        {% include 'layouts/consultation.html' %}
+        {% if prev %}
+          <div class="footer-buttons footer-buttons--prev" role="navigation" aria-label="footer navigation">
+            <a href="{{ prev.link|e }}" class="" title="{{ prev.title|striptags|e }}" accesskey="p" rel="prev"> {{ _(t.go_to) }} {{ prev.title }}</a>
+          </div>
+        {% endif %}
+        {% block body %}{% endblock %}
+        {% if next %}
+          <div class="footer-buttons footer-buttons--next" role="navigation" aria-label="footer navigation">
+            <a href="{{ next.link|e }}" class="" title="{{ next.title|striptags|e }}" accesskey="n" rel="next">{{ next.title }}</a>
+          </div>
+        {% endif %}
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    {% include 'layouts/footer.html' %}
+  </footer>
 
-  {% include 'layouts/scrolltop.html' %}
   {% block scripts %}
   {% include 'layouts/scripts.html' %}
   {% endblock %}
-  {% include 'layouts/web-analytics.html' %}
-
 </body>
 </html>

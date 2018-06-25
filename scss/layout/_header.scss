@@ -1,0 +1,27 @@
+.header {
+  .header__main {
+    .site-logo {
+      width: 3em;
+
+      @include media-breakpoint-up(md) {
+        width: 4em;
+      }
+    }
+
+    .site-title {
+      &:hover {
+        color: $white;
+      }
+
+      .site-title__main-title {
+        line-height: 1.2;
+        font-size: $h3-font-size;
+        font-weight: 600;
+      }
+
+      .site-title__subtitle {
+        display: block;
+      }
+    }
+  }
+}

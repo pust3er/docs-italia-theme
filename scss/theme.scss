@@ -1,0 +1,16 @@
+/* Bootstrap Italia
+  https://italia.github.io/bootstrap-italia/
+*/
+@import "bootstrap-italia/src/scss/bootstrap-italia";
+
+/* Theme base */
+@import "base/variables";
+@import "base/helpers";
+@import "base/icons";
+
+/* Theme layouts */
+@import "layout/general";
+@import "layout/document";
+@import "layout/sidebar";
+@import "layout/header";
+@import "layout/header-doc";

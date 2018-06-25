@@ -1,0 +1,33 @@
+body {
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+
+  .header,
+  .header-doc,
+  .main,
+  .footer {
+    @extend .container-fluid;
+
+    max-width: 1440px;
+  }
+}
+
+p {
+  font-family: $font-family-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $black;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

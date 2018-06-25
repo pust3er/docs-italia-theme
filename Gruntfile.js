@@ -21,10 +21,10 @@ module.exports = function(grunt) {
         options: {
           failOnError: false
         },
-        src: ['sass/**/*.scss']
+        src: ['scss/**/*.scss']
       },
 
-      build: ['sass/**/*.scss']
+      build: ['scss/**/*.scss']
     },
 
     sass: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'sass',
+          cwd: 'scss',
           src: ['*.scss'],
           dest: 'docs_italia_theme/static/css',
           ext: '.css'
@@ -151,14 +151,14 @@ module.exports = function(grunt) {
       /* Stylelint scss files */
       stylelint: {
         files: [
-          'sass/**/*.scss'
+          'scss/**/*.scss'
         ],
         tasks: ['stylelint:dev']
       },
       /* Compile sass changes into theme directory */
       sass: {
         files: [
-          'sass/**/*.scss'
+          'scss/**/*.scss'
         ],
         tasks: ['sass']
       },

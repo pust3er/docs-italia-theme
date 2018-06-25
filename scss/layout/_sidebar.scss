@@ -1,0 +1,15 @@
+.sidebar {
+  width: 100%;
+  display: none;
+  background-color: $white;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    width: #{$sidebar-width};
+    border-right: 1px $gray-100 solid;
+  }
+
+  .sidebar__nav {
+    padding: 1rem 2rem;
+  }
+}

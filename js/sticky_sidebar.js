@@ -2,20 +2,24 @@
 module.exports = themeStickySidebar = (function ($) {
 
   return {
-    init: function(callback) {
-      new StickySidebar('.docs-italia-menu', {
-        containerSelector: '#main',
-        innerWrapperSelector: '#desktop-menu',
+    init: function() {
+      var stickySidebar = new StickySidebar('.sidebar', {
+        containerSelector: '.main',
+        innerWrapperSelector: '.sidebar__nav',
         topSpacing: 68,
         bottomSpacing: 150
-      }),
+      });
 
-      $('#desktop-menu .collapse').on('shown.bs.collapse', function() {
+      $('.sidebar__nav .collapse').on('show.bs.collapse', function() {
+        $(window).scrollTop($(window).scrollTop()-10);
+        $(window).scrollTop($(window).scrollTop()+10);
         stickySidebar.updateSticky();
-        $(window).scroll(); //non sono certo che serva a qualcosa
-      }).on('hidden.bs.collapse', function() {
+        // $(window).scroll(); //non sono certo che serva a qualcosa
+      }).on('hide.bs.collapse', function() {
+        $(window).scrollTop($(window).scrollTop()-10);
+        $(window).scrollTop($(window).scrollTop()+10);
         stickySidebar.updateSticky();
-        $(window).scroll();
+        // $(window).scroll();
       });
     }
   }
