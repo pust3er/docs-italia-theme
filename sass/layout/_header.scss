@@ -1,3 +1,29 @@
+.slim-header .navbar-toggler {
+  .caret {
+    display: inline-block;
+  }
+
+  .caret::after {
+    content: "\005E";
+  }
+}
+
+.slim-header .navbar-toggler.collapsed .caret {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari 3-8 */
+  transform: rotate(180deg);
+}
+
+.lang-selector {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  .dropdown-toggle::after {
+    content: "\005E";
+  }
+}
+
 .doc-header {
   box-shadow: 0 0 120px 0 rgba($black, 0.1);
   position: relative;
