@@ -57,11 +57,7 @@
       </ul>
     </div>
     <!-- <ul class="navbar-nav mr-auto"> -->
-</nav>
-
-
-
-
+  </nav>
 
   <div class="row pt-4 pb-4 pl-4 pl-md-5 pr-4 pr-lg-5 bg-primary--dark align-items-end">
     <div class="logo--header pb-1">
@@ -69,7 +65,7 @@
         <svg class="svg--header align-bottom" xmlns="http://www.w3.org/2000/svg" height="78.187" width="97.387" viewBox="0 0 91.300002 73.300002"><g fill="#fff"><path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"/></g></svg>
       </a>
     </div>
-    <div class="col-6 pl-4">
+    <div class="col pl-4">
       <h1 class="h1--header mb-1">
         <a href="https://docs.developers.italia.it" class="text-white">
           {{ _(t.site_title | default(site.title) | escape) }}
@@ -80,7 +76,7 @@
       </h1>
       <h2 class="text-white mb-0 h2--header">{{ _(t.site_subtitle | default(site.subtitle) | escape) }}</h2>
     </div>
-    <div class="col-6">
+    <div class="col mx-l-auto">
       <div class="text-center text-lg-right social d-flex align-items-center justify-content-center justify-content-lg-end flex-column flex-lg-row">
         <div class="mr-lg-1 mb-2 mb-lg-0">{{ t.follow_us | capitalize }}</div>
         <div>
@@ -89,13 +85,28 @@
           <a href="https://twitter.com/teamdigitaleIT" class="d-finline-lex small-prints mx-1"><i class="d-inline-block icon it-icon it-icon-twitter it-icon-github"></i>Twitter</a>
         </div>
       </div>
-      <div class="text-center text-lg-right social d-flex align-items-center justify-content-center justify-content-lg-end flex-column flex-lg-row">
-        <div class="mr-lg-1 mb-2 mb-lg-0">{{ t.search | capitalize }}</div>
-        <span class="it-icon-search">
-          <span class="sr-only">{{ t.search_form_label }}</span>
-        </span>
-      </div>
     </div>
+  </div>
+  <div class="row pt-4 pb-4 pl-4 pl-md-5 pr-4 pr-lg-5 bg-primary--dark">
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-between mx-r-auto">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Chi siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Come lo uso</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Come partecipo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contatti</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 <div class="doc-header container-fluid container-fluid--desktop bg-white">
