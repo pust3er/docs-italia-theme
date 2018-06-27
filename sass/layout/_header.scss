@@ -28,7 +28,7 @@
       margin-left: 0;
       margin-bottom: 0.1rem;
 
-      &:hover {
+      &:not(.nav-text):hover {
         border-left: 0;
         margin-left: 0;
         border-bottom: 0.1rem solid #fff;
@@ -57,6 +57,10 @@
 
     &.divider--w-100 {
       width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        width: inherit;
+      }
     }
 
     @include media-breakpoint-up(lg) {
