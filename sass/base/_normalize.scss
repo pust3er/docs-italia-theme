@@ -5,3 +5,12 @@
 .navbar-dark--text-white {
   color: white;
 }
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .lang-selector .nav-link {
+  color: white !important;
+}
+
+.navbar.bg-white {
+  background-color: $white;
+}
