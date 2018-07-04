@@ -315,3 +315,17 @@
 .info--header {
   /* background */
 }
+
+.social .social__label,
+.social .social__link {
+  color: $white;
+}
+
+.social .social__link {
+  font-size: 1.5rem;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
