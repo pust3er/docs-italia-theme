@@ -14,3 +14,24 @@
 .navbar.bg-white {
   background-color: $white;
 }
+
+.dropdown-menu.dropdown-menu-right::before {
+  @include media-breakpoint-up(lg) {
+    right: 24px;
+    left: auto;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar .dropdown-menu.dropdown-menu-right {
+    left: auto;
+    right: 0;
+  }
+}
+
+.dropdown-menu-right {
+  @include media-breakpoint-down(lg) {
+    right: auto;
+    left: auto;
+  }
+}
