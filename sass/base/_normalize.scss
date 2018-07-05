@@ -35,3 +35,21 @@
     left: auto;
   }
 }
+
+.dropdown.show .dropdown-menu[x-placement='bottom-start'],
+.btn-group.show .dropdown-menu[x-placement='bottom-start'] {
+  animation: dropdownFadeIn forwards 0.3s;
+}
+
+.dropdown.show .dropdown-menu[x-placement='top-start'],
+.btn-group.show .dropdown-menu[x-placement='top-start'] {
+  animation: dropdownFadeInTop forwards 0.3s;
+}
+
+.dropdown-menu[x-placement^="top"],
+.dropdown-menu[x-placement^="right"],
+.dropdown-menu[x-placement^="bottom"],
+.dropdown-menu[x-placement^="left"] {
+  right: auto;
+  bottom: auto;
+}
